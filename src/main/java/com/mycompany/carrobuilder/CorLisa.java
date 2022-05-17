@@ -10,8 +10,8 @@ package com.mycompany.carrobuilder;
  */
 public class CorLisa extends Componentes implements IProtocolo{
     
-    public CorLisa(String tipo, float price){
-        this.descricao = tipo;
+    public CorLisa(String descricao, float price){
+        this.descricao = descricao;
         this.preco = price;
     }
     

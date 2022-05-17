@@ -4,6 +4,8 @@
  */
 package com.mycompany.carrobuilder;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author igor_
@@ -14,7 +16,22 @@ public class Client {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Carro car = new Carro();
+        String cor = "preto";
+        String pneu = "pirelli";
+        String som = "padrao";
+        String suspensao = "padrao";
+        
+        String tipo = JOptionPane.showInputDialog("Informe o tipo de Notebook: 1 - Básico ou 2 - Personalizado");
+        
+        if(tipo.equals("1")){
+            IBuilderProtocolo carroo = new BuilderCarroBasico();
+            car = carroo.configura(cor, pneu, som, suspensao);
+        }
+        
+        if(tipo.equals("2")){
+            IBuilderProtocolo carroo = new BuilderCarroBasico();
+            car = carroo.configura(cor, pneu, som, suspensao);
+        }
     }
-    
 }

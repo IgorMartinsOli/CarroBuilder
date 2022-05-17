@@ -9,6 +9,5 @@ package com.mycompany.carrobuilder;
  * @author igor_
  */
 public interface IBuilderProtocolo {
-   public Carro configura(String m, String t, String d, String nd, String d2, String b, String me);
-    
+   public Carro configura(String cor, String pneu, String som, String suspensao);
 }
