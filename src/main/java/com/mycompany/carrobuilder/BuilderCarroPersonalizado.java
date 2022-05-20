@@ -12,7 +12,7 @@ public class BuilderCarroPersonalizado implements IBuilderProtocolo {
     public Carro carro = new Carro();
 
     @Override
-    public Carro configura(String cor, String pneu, String som, String suspensao) {
+    public Carro configura(String cor, String pneu, String som, String suspensao) {  
        switch(cor){
            case "preto" -> {
                Componentes cor1 = new CorLisa(cor, 100);
@@ -52,7 +52,7 @@ public class BuilderCarroPersonalizado implements IBuilderProtocolo {
                this.carro.adicionaComponente(suspensaoo);
             }
            case "ar" -> {
-               Componentes suspensaoo = new SuspensaoNormal("Suspensao a Ar", 100);
+               Componentes suspensaoo = new SuspensaoAr("Suspensao a Ar", 100);
                this.carro.adicionaComponente(suspensaoo);
             }
        }
