@@ -22,16 +22,20 @@ public class Client {
         String som = "padrao";
         String suspensao = "padrao";
         
-        String tipo = JOptionPane.showInputDialog("Informe o tipo de Notebook: 1 - Básico ou 2 - Personalizado");
+        String tipo = JOptionPane.showInputDialog("Informe o tipo de Carro: 1 - Básico ou 2 - Personalizado");
         
         if(tipo.equals("1")){
             IBuilderProtocolo carroo = new BuilderCarroBasico();
             car = carroo.configura(cor, pneu, som, suspensao);
+            System.out.println(car.getPrice());
+            System.out.println(car.configuracao);
         }
         
         if(tipo.equals("2")){
-            IBuilderProtocolo carroo = new BuilderCarroBasico();
-            car = carroo.configura(cor, pneu, som, suspensao);
+            IBuilderProtocolo carroo = new BuilderCarroPersonalizado();
+            car = carroo.configura("desenhado", "pirelli", "automotivo", "ar");
+            System.out.println(car.getPrice());
+            System.out.println(car.configuracao);
         }
     }
 }
